@@ -11,3 +11,11 @@ export interface TarjetasNosotros{
     imagen: string;
     alt: string;
 }
+
+export interface Ropa {
+    id: string;
+    titulo: string;
+    descripcion: string;
+    imagen: string;
+    alt: string;
+}
