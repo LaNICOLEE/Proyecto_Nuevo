@@ -9,6 +9,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+//SERVICIOS
+import { AuthService } from './service/auth.service';
+//FORMULARIO
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,13 +27,17 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   exports:[
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
-  ]
+    MatButtonModule,
+    FormsModule
+
+  ],
+  providers: [AuthService]//es el provedor
 })
 export class AuthModule { }
