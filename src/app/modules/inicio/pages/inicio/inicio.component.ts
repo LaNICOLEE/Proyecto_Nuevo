@@ -1,5 +1,5 @@
 import { Component,OnInit} from '@angular/core';
-import {TarjetasInicio} from 'src/app/mpdels/modelos';
+import {TarjetasInicio} from 'src/app/models/modelos';
 //Nueva interfaz
 import { Ropa } from 'src/app/models/ropa';
 
