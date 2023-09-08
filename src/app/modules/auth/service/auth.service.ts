@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import {AngularFireAuth} from '@angular/fire/compat/auth'
-import { Usuario } from 'src/app/models/usuario';
+import {AngularFireAuth} from '@angular/fire/compat/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +9,19 @@ export class AuthService {
   //referenciar autentificacion de firebase 
   constructor(public auth: AngularFireAuth) { }
 
-  registrar(nombre: string, contraseña: string){
-   return this.auth.createUserWithEmailAndPassword(nombre,contraseña)
+  //funcion para el inicio de sesion
+  iniciarSesion(email: string, contrasena: string){
+    return this.auth.signInWithEmailAndPassword(email, contrasena);
+  }
+
+  cerrarSesion(){
+    //devuelve una promesa vacia
+    return this.auth.signOut();
+  }
+    
+  //funcion para retornar nueva informacion para nombre y sontraseña
+  registrar(email: string, contrasena: string){
+   return this.auth.createUserWithEmailAndPassword(email,contrasena)
   }
 
   // funcion asincronica para tomar UID

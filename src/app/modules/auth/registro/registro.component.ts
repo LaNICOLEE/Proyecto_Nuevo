@@ -23,8 +23,8 @@ export class RegistroComponent {
 
     usuarios: Usuario = {
     uid: '',
-    nombre1: '',
     nombre: '',
+    email: '',
     rol: '',
     contrasena: '',
   }
@@ -38,11 +38,11 @@ export class RegistroComponent {
   //funcion(async):Es una funcion asincronica. Utilizada para funciones asincronicas porque toma mas datos de internet
   async registrarse(){      
     const credenciales = {
-      nombre: this.usuarios.nombre,
+      email: this.usuarios.nombre,
       contrasena: this.usuarios.contrasena,
     };
 
-    const res = await this.servicioAuth.registrar(credenciales.nombre, credenciales.contrasena)
+    const res = await this.servicioAuth.registrar(credenciales.email, credenciales.contrasena)
     //metodo THEN devuelme misma promesa
     .then(res =>{
       alert("Ha creado un nuevo usuario con exito :D ");
