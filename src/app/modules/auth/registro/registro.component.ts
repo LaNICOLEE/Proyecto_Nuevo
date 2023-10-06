@@ -43,11 +43,11 @@ export class RegistroComponent {
     };
 
     const res = await this.servicioAuth.registrar(credenciales.email, credenciales.contrasena)
-    //metodo THEN devuelme misma promesa
+    //metodo THEN devuelve misma promesa
     .then(res =>{
       alert("Ha creado un nuevo usuario con exito :D ");
 
-      //llamamos una nueva ruta -> 
+      //llamamos una nueva ruta -> nos redirigimos
       this.router.navigate(["/inicio"])
     })
 

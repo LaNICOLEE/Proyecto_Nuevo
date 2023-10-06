@@ -8,21 +8,24 @@
    <!--enrutamos paginas-->
    <button mat-button routerLink="/inicio">Inicio</button>
    <button mat-button routerLink="/nosotros">Nosotros</button>
-   <button mat-button routerLink="/productos">Productos</button>
+   <!--menu despeglable para productos-->
+   <button mat-button [matMenuTriggerFor]="menu">productos</button>
+   <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/productos">productos</button>
+    <button mat-menu-item routerLink="/accesorios">accesorios</button>
+    <button mat-menu-item routerLink="/esculturas">esculturas</button>
+    <button mat-menu-item routerLink="/obras">obras</button>
+  </mat-menu>
    <button mat-button routerLink="/admin">Admin</button>
 
-   <!--registro-->
-   <button mat-icon-button routerLink="/registro">
-     <mat-icon>person_add</mat-icon>
-   </button>
+   <span class="example-spacer"></span>
 
-   <!--login-->
-   <button  mat-icon-button routerLink="/login">
-    <mat-icon>person</mat-icon>
-   </button>
+  <!--Menu despegable para usuarios (registro y login)-->
+   <!--va a contener los formularios de acceso -->
+   <button mat-button [matMenuTriggerFor]="user"><mat-icon>person</mat-icon></button>
+   <mat-menu #user="matMenu">
+    <button mat-menu-item routerLink="/login">Iniciar sesion<mat-icon>person</mat-icon></button>
+    <button mat-menu-item routerLink="/registro">Registrarse<mat-icon>person_add</mat-icon></button>
+  </mat-menu>
 
-   <!-- ... -->
-   <button  mat-icon-button routerLink="/login">
-    <mat-icon>person_off</mat-icon>
-   </button>
- </mat-toolbar>
+   

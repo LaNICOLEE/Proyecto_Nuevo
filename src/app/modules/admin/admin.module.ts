@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
+// ARCHIVO DE RUTAS
 import { AdminRoutingModule } from './admin-routing.module';
+
+// COMPONENTE
 import { TableComponent } from './compomnents/table/table.component';
+
+// VISTA
 import { AdminComponent } from './pages/admin/admin.component';
+
+// MATERIAL
 import { MatIconModule } from '@angular/material/icon';
+
+// ANGULAR
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,12 +26,16 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     AdminComponent,
     TableComponent,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

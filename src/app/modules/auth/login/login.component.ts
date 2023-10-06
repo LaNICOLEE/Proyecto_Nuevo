@@ -26,6 +26,7 @@ export class LoginComponent {
     public router:  Router
   ){};
 
+  // llamamos función para INICIAR SESIÓN
   async iniciar(){
     const credenciales = {
       email: this.usuarios.email,

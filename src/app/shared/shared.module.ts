@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button'
 //Componente
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -23,14 +24,16 @@ import { FooterComponent } from './components/footer/footer.component';
     MatToolbarModule,
     MatIconModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ],
   exports: [
     MatToolbarModule,
     MatIconModule,
     NavbarComponent,
     FooterComponent,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
 
   ]
 })
