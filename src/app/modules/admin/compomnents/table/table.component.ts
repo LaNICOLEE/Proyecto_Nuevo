@@ -97,4 +97,9 @@ export class TableComponent {
       alert ("No se pudo modificar el producto :( . \n" + error);
     })
   }
+  //eliminar el producto
+  mostrarBorrar(productoSeleccionado: Producto){
+    this.modalVisibleProducto = true;
+    this.productoSeleccionado
+  }
 }
